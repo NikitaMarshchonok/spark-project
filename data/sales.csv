@@ -1,0 +1,11 @@
+order_id,customer_id,product,amount,country
+1,101,iPhone,999,USA
+2,102,MacBook,1999,UK
+3,103,iPhone,999,Germany
+4,101,AirPods,249,USA
+5,104,MacBook,1999,France
+6,105,iPhone,999,USA
+7,102,iPad,799,UK
+8,106,AirPods,249,Germany
+9,107,MacBook,1999,USA
+10,103,iPhone,999,France

@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Environment variables
+.env
+.env.*
+
+# macOS
+.DS_Store
+
+# VS Code
+.vscode/
+
+# Spark / Hadoop temporary files
+.spark-warehouse/
+metastore_db/
+derby.log
+*.crc
+_SUCCESS
+part-*
+*.snappy.parquet
+
+# Logs
+*.log
+
+# Large output folders
+output/
+outputs/
+results/
+tmp/
