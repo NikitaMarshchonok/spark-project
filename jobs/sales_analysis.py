@@ -46,4 +46,15 @@ df.groupBy("product") \
     .orderBy("units_sold", ascending=False) \
     .show()
 
+#spark.stop()
+
+print("=== Самые активные покупатели ===")
+df.groupBy('customer_id') \
+    .agg(
+        count('order_id').alias('total_orders'),
+        sum('amount').alias('total_revenue')
+    ) \
+    .orderBy('total_revenue', ascending=False) \
+    .show()
+
 spark.stop()
