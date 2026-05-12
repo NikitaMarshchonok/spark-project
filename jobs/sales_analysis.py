@@ -17,6 +17,7 @@ df = spark.read \
     .option("inferSchema", "true") \
     .csv("/opt/spark/data/sales.csv")
 
+df = df.filter(df["amount"] > 999)
 # Посмотрим на структуру таблицы
 print("=== Структура данных ===")
 df.printSchema()
