@@ -57,4 +57,17 @@ df.groupBy('customer_id') \
     .orderBy('total_revenue', ascending=False) \
     .show()
 
+#шаг 5: Читаем вторую таблицу - клиенты
+customers = spark.read \
+    .option("header", 'true') \
+    .option('inferSchema', 'true') \
+    .csv('/opt/spark/data/customers.csv')
+
+print("=== Заказы с именами клиентов ===")
+#join соеденяет две таблицы по общему полю
+df.join(customers, on='customer_id', how='inner') \
+    .select('name', 'product', 'amount', 'country') \
+    .orderBy('amount', ascending=False) \
+    .show()    
+
 spark.stop()
